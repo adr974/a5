@@ -1,0 +1,32 @@
+.hover-h3
+{
+  display: inline-block;
+  position: relative;
+  margin-top: 0;
+}
+
+.hover-h3::after
+{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width .3s;
+}
+
+.hover-h3:hover::after
+{
+  width: 100%;
+  transition: width .3s;
+}
+
+/*.container*/
+/*{*/
+/*  position: absolute;*/
+/*  width: 500px;*/
+/*  height: 500px;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*}*/

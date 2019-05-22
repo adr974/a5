@@ -13,6 +13,8 @@ import { SurveysListComponent } from './surveys-list/surveys-list.component';
 import { SurveyDetailsComponent } from './survey-details/survey-details.component';
 import {FormsModule} from '@angular/forms';
 import { SurveySearchComponent } from './survey-search/survey-search.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { SurveySearchComponent } from './survey-search/survey-search.component';
     SurveysListComponent,
     SurveyDetailsComponent,
     SurveySearchComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,10 @@ import { SurveySearchComponent } from './survey-search/survey-search.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {path: 'about', component: AboutComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
